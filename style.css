@@ -1,0 +1,320 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+
+/* -------------------------------------------------- */
+
+/*
+pouzivame mobile first pristup
+tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni
+s pribyvajici sirkou pridavame media query pro
+středně široké obrazovky:
+@media (min-width: 480px) {
+}
+široké obrazovky
+@media (min-width: 860px) {
+}
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.paticka {
+    text-align: center;
+    font-size: 14px;
+    color: silver;
+}
+
+.paticka a {
+    color: silver;
+}
+
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+/* ---default + mobile--- */
+
+div {
+    color: white;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+.burger {
+    position: relative;
+    color: white;
+    background:url(images/burger.jpg);
+    background-size: cover;
+    min-height: 200px;
+    background-position: center;
+    justify-content: space-evenly;
+    order: 1;
+ }
+
+.burger-heading {
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 200px;
+}
+
+.burger-textleft {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.burger-textright {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    margin-top: -30px;
+}
+
+.sushi {
+    min-height: 90px;
+    background:url(images/sushi.jpg);
+    background-position: center;
+    background-size: cover;
+    order: 2;
+    }
+
+.sushi-heading {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 200px;
+}
+
+.sushi-textleft {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.sushi-textright {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    margin-top: -30px;
+}
+.sauce {
+    min-height: 90px;
+    background:url(images/rajcata.jpg);
+    background-size: cover;
+    background-position: center;
+    order:3;
+   }
+
+.sauce-heading {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 200px;
+}
+
+.sauce-textleft {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.sauce-textright {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    margin-top: -30px;
+}
+
+.chicken {
+    min-height: 90px;
+    background:url(images/kure.jpg);
+    background-size: cover;
+    background-position: center;
+    order: 4;
+}
+
+.chicken-heading {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 200px;
+}
+    
+.chicken-textleft {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.chicken-textright {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    margin-top: -30px;
+}
+
+.bbq {
+    min-height: 90px;
+    background:url(images/grilovani.jpg);
+    background-size: cover;
+    background-position: center;
+    order: 5;
+}
+
+.bbq-heading {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 200px;
+}
+
+.bbq-textleft {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: left;
+}
+
+.bbq-textright {
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: right;
+    margin-top: -30px;
+}
+
+/* ---tablet--- */
+@media only screen and (min-height: 600px) {
+
+    .conatiner {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .burger {
+        min-height: 250px;
+        order: 1;
+        flex:1;
+    }
+    .sushi {
+        order: 2;
+        flex: 1;
+        flex-basis: 250px;
+    }
+    .kure {
+        order: 3;
+    }
+    .sauce {
+        order: 4;
+    }
+    .bbq {
+        order: 5;
+    }
+    .sushi, 
+    .chicken, 
+    .sauce,
+    .bbq {
+        min-height: 150px;
+    }
+
+    .burger-heading {
+        font-size: 2rem;
+    }
+
+    .sushi-heading,
+    .chicken-heading,
+    .sauce-heading,
+    .bbq-heading {
+        font-size: 1.2rem;
+    }
+
+    .burger-heading,
+    .burger-textleft,
+    .sushi-heading,
+    .sushi-textleft,
+    .chicken-heading, 
+    .chicken-textleft,
+    .sauce-heading,
+    .sauce-textleft,
+    .bbq-heading, 
+    .bbq-textleft {
+        padding-left: 1.25rem;
+        padding-top: 1.25rem;
+    }
+    
+    .burger-textright,
+    .sushi-textright,
+    .sauce-textright, 
+    .chicken-textright, 
+    .bbq-textright {
+        padding-right: 1.25rem;
+        padding-top: 1.25rem;
+    }
+
+}
+/* ---desktop--- */
+
+@media only screen and (min-height: 900px) {
+
+    .burger {
+        min-height: 400px;
+    }
+
+    .sushi, 
+    .chicken, 
+    .sauce,
+    .bbq {
+        min-height: 200px;
+    }
+
+    .burger-heading {
+        font-size: 3rem;
+    }
+
+    .sushi-heading,
+    .chicken-heading,
+    .sauce-heading,
+    .bbq-heading {
+        font-size: 1.75rem;
+    }
+
+    .burger-heading,
+    .burger-textleft,
+    .sushi-heading,
+    .sushi-textleft,
+    .chicken-heading, 
+    .chicken-textleft,
+    .sauce-heading,
+    .sauce-textleft,
+    .bbq-heading, 
+    .bbq-textleft {
+        padding-left: 1.25rem;
+        padding-top: 1.25rem;
+    }
+    
+    .burger-textright,
+    .sushi-textright,
+    .sauce-textright, 
+    .chicken-textright, 
+    .bbq-textright {
+        padding-right: 1.25rem;
+        padding-top: 1.25rem;
+    }
